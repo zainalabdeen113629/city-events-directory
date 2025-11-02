@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دليل فعاليات المدينة — الرئيسية</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page-index">
+
+  <!-- HEADER / NAV -->
+  <header class="site-header bg-grad py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="d-flex align-items-center text-decoration-none">
+        <img src="assets/img/logo.png" alt="logo" class="logo me-3">
+        <div class="text-white">
+          <h1 class="h5 mb-0 brand-title">دليل فعاليات المدينة</h1>
+          <small class="brand-sub">كل ما يحدث في مدينتك</small>
+        </div>
+      </a>
+
+      <nav class="d-none d-lg-block">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="events.html">الفعاليات</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">عن الدليل</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <button id="darkModeToggle" class="btn btn-outline-light btn-sm">وضع مظلم</button>
+        <button class="btn btn-light btn-sm d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav">قائمة</button>
+      </div>
+    </div>
+
+    <!-- Mobile offcanvas nav -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNav" dir="rtl">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">القائمة</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero inside header container -->
+    <div class="container hero py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-end">
+          <h2 class="display-6 fw-bold">اكتشف فعاليات قريبة منك — لكل أسبوع تجربة جديدة</h2>
+          <p class="lead">موسيقى — ثقافة — رياضة — فعاليات عائلية. تصفح الآن واختر ما يناسبك.</p>
+          <a href="events.html" class="btn btn-primary btn-lg me-2">استعرض الفعاليات</a>
+          <a href="#categories" class="btn btn-outline-light btn-lg">التصنيفات</a>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block text-start">
+          <div class="hero-images position-relative">
+            <img src="assets/img/hero-1.jpg" alt="hero" class="rounded main-hero shadow">
+            <img src="assets/img/hero-2.jpg" alt="hero2" class="rounded sub-hero shadow">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container my-5">
+
+    <!-- Featured slider -->
+    <section id="featured" class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="section-title mb-0">فعاليات بارزة هذا الأسبوع</h3>
+        <div>
+          <button class="btn btn-sm btn-outline-secondary me-2" id="featPrev">السابق</button>
+          <button class="btn btn-sm btn-outline-secondary" id="featNext">التالي</button>
+        </div>
+      </div>
+      <div class="carousel-wrap">
+        <div id="featuredCarousel" class="d-flex gap-3 overflow-hidden">
+          <!-- JS will inject feature cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories quick -->
+    <section id="categories" class="mb-5 text-end">
+      <h4>التصنيفات السريعة</h4>
+      <div class="d-flex gap-2 flex-wrap">
+        <button class="btn btn-sm btn-outline-dark badge-btn" data-filter="all">الكل</button>
+        <button class="btn btn-sm btn-outline-primary badge-btn" data-filter="music">موسيقى</button>
+        <button class="btn btn-sm btn-outline-success badge-btn" data-filter="culture">ثقافة</button>
+        <button class="btn btn-sm btn-outline-warning badge-btn" data-filter="sports">رياضة</button>
+        <button class="btn btn-sm btn-outline-info badge-btn" data-filter="family">عائلي</button>
+      </div>
+    </section>
+
+    <!-- Latest events grid -->
+    <section id="latest" class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="section-title mb-0">أحدث الفعاليات</h3>
+        <small class="text-muted">تم التحديث تلقائيًا</small>
+      </div>
+
+      <div class="row g-4" id="eventsGrid">
+        <!-- JS will render event cards here -->
+      </div>
+    </section>
+
+    <!-- Team / Participants (يتضمن أسماء، أرقام، IDs كما طلبت) -->
+    <section id="team" class="mb-5 text-end">
+      <h4>فريق المشروع</h4>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card team-card h-100 text-end p-3">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/img/team-1.jpg" alt="team" class="rounded-circle" width="64" height="64">
+              <div>
+                <h6 class="mb-0">  زين العابدين محمود يونس</h6>
+                <small class="d-block text-muted">مطوّر واجهة — ID: zain_alabdeen_113629 — 050-111-2222</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer bg-dark text-light py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center text-end">
+      <div>
+        <strong>دليل فعاليات المدينة</strong>
+        <div class="small">حقوق النشر © 2025 — جميع الحقوق محفوظة</div>
+      </div>
+      <div class="text-end">
+        <div>تواصل معنا: <a href="mailto:info@cityevents.example" class="text-decoration-none text-light">info@cityevents.example</a></div>
+        <div class="mt-2">
+          <a class="text-light me-2" href="#">فيسبوك</a>
+          <a class="text-light me-2" href="#">تويتر</a>
+          <a class="text-light" href="#">انستغرام</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="scrollTop" class="btn btn-primary shadow d-print-none">⬆</button>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* styles.css
+   تصميم عصري و\"فاخر\" مع RTL ودعم Dark Mode.
+   تعليقات قصيرة توضح الاختيارات. */
+
+/* Base */
+:root{
+    --primary:#2b6cb0;
+    --accent:#f6ad55;
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --muted:#6c757d;
+    --glass: rgba(255,255,255,0.6);
+    --radius:16px;
+    --shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+  
+  *{box-sizing:border-box}
+  html,body{font-family:'Tajawal',sans-serif;background:var(--bg);color:#111;margin:0;padding:0;}
+  
+  /* Header gradient for luxury look */
+  .bg-grad{
+    background: linear-gradient(135deg, rgba(43,108,176,0.95), rgba(246,173,85,0.9));
+    color:#fff;
+  }
+  
+  /* Logo */
+  .logo{width:56px;height:56px;object-fit:cover;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.2);}
+  
+  /* Hero images layout */
+  .hero-images{position:relative;width:320px;height:220px;}
+  .hero-images .main-hero{width:100%;height:100%;object-fit:cover;border-radius:18px;transform:rotate(-2deg);}
+  .hero-images .sub-hero{position:absolute;bottom:-10px;left:-20px;width:140px;height:90px;object-fit:cover;border-radius:12px;border:6px solid rgba(255,255,255,0.6);}
+  
+  /* Cards */
+  .card{border-radius:var(--radius);box-shadow:var(--shadow);border:0}
+  
+  /* Featured carousel card */
+  .featured-card{overflow:hidden;border-radius:18px}
+  .featured-card img{height:220px;object-fit:cover}
+  
+  /* Team card */
+  .team-card img{object-fit:cover}
+  
+  /* Buttons & badges */
+  .badge-btn{border-radius:999px;padding:0.45rem 0.9rem}
+  
+  /* Events grid card image */
+  .event-card-img{height:180px;object-fit:cover;border-top-left-radius:var(--radius);border-top-right-radius:var(--radius);}
+  
+  /* Footer */
+  .site-footer{background:#0b1220;color:#fff}
+  
+  /* Scroll to top */
+  #scrollTop{position:fixed;right:20px;bottom:20px;border-radius:12px;display:none;z-index:9999}
+  
+  /* Carousel wrapper custom scroll (luxury smooth) */
+  .carousel-wrap{
+    --gap:1rem;
+    overflow:hidden;
+    padding-bottom:0.5rem;
+  }
+  #featuredCarousel{scroll-behavior:smooth;}
+  
+  /* Modal overrides */
+  .modal-content{border-radius:14px}
+  
+  /* Small responsive tweaks */
+  @media (max-width:992px){
+    .hero-images{display:none}
+    .brand-sub{display:none}
+  }
+  
+/* 🌙 Dark mode styling */
+body.dark {
+    --bg: #0b1220;
+    --card: #0f1724;
+    --muted: #9aa4b2;
+    --text: #ffffff;
+    --link: #60a5fa;
+    --link-hover: #93c5fd;
+    color: var(--text);
+    background: linear-gradient(180deg, #071428, #071b2a);
+  }
+  
+  /* General elements */
+  body.dark p,
+  body.dark h1,
+  body.dark h2,
+  body.dark h3,
+  body.dark h4,
+  body.dark h5,
+  body.dark h6,
+  body.dark span,
+  body.dark li,
+  body.dark a,
+  body.dark button,
+  body.dark label,
+  body.dark input,
+  body.dark textarea {
+    color: var(--text) !important;
+  }
+  
+  /* Links */
+  body.dark a {
+    color: var(--link);
+  }
+  body.dark a:hover {
+    color: var(--link-hover);
+  }
+  
+  /* Cards and containers */
+  body.dark .card {
+    background: var(--card);
+    color: var(--text);
+  }
+  
+  /* Navbar and footer */
+  body.dark .site-footer {
+    background: #02060a;
+    color: var(--text);
+  }
+  body.dark .navbar {
+    background: #0a1422 !important;
+  }
+  body.dark .navbar a {
+    color: var(--text) !important;
+  }
+  
+  /* Muted or secondary text */
+  body.dark .text-muted {
+    color: var(--muted) !important;
+  }
+  
+  /* Gradient backgrounds */
+  body.dark .bg-grad {
+    filter: brightness(0.9);
+  }
+  
+  /* Buttons */
+  body.dark .btn {
+    color: #fff !important;
+    border-color: #3b82f6 !important;
+    background-color: #1d4ed8 !important;
+  }
+  body.dark .btn:hover {
+    background-color: #2563eb !important;
+  }
+  
+  
